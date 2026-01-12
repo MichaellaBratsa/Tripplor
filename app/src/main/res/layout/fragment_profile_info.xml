@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAE6CF"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Profile Icon -->
+        <FrameLayout
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/profile_circle">
+
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile_2"
+                app:tint="#123840" />
+        </FrameLayout>
+
+        <!-- Username Title -->
+        <TextView
+            android:id="@+id/titleProfileInfo"
+            android:text="Profile"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#123840"
+            android:layout_marginBottom="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Full Name -->
+        <TextView
+            android:text="Full Name"
+            android:textColor="#123840"
+            android:textSize="15sp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/info_fullName"
+            android:background="@drawable/rounded_field"
+            android:padding="12dp"
+            android:textColor="#123840"
+            android:hint="Full Name"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Email -->
+        <TextView
+            android:text="Email"
+            android:textColor="#123840"
+            android:textSize="15sp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/info_email"
+            android:background="@drawable/rounded_field"
+            android:padding="12dp"
+            android:textColor="#123840"
+            android:hint="example@email.com"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Phone -->
+        <TextView
+            android:text="Phone Number"
+            android:textColor="#123840"
+            android:textSize="15sp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/info_phone"
+            android:background="@drawable/rounded_field"
+            android:padding="12dp"
+            android:textColor="#123840"
+            android:hint="eg. (123) 456-7890"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Username -->
+        <TextView
+            android:text="Username"
+            android:textColor="#123840"
+            android:textSize="15sp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/info_username"
+            android:background="@drawable/rounded_field"
+            android:padding="12dp"
+            android:textColor="#123840"
+            android:hint="Username"
+            android:textSize="16sp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Edit Profile Button -->
+        <Button
+            android:id="@+id/button_editProfile"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:text="EDIT PROFILE"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#1B4658"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:background="@drawable/signin_button"
+            android:backgroundTint="@null"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"/>
+    </LinearLayout>
+
+</ScrollView>

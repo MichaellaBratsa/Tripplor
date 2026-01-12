@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="review_filter_entries">
+        <item>All</item>
+        <item>★ and up</item>
+        <item>★★ and up</item>
+        <item>★★★ and up</item>
+        <item>★★★★ and up</item>
+        <item>★★★★★ only</item>
+    </string-array>
+</resources>

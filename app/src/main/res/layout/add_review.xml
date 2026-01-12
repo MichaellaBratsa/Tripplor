@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FAE6CF">
+
+    <!-- Name -->
+    <EditText
+        android:id="@+id/editUserName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Your Name"
+        android:background="@drawable/rounded_field"
+        android:padding="12dp"
+        android:textColor="#123840"
+        android:textColorHint="#707070"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Rating -->
+    <EditText
+        android:id="@+id/editRating"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Rating (1 - 5)"
+        android:inputType="number"
+        android:background="@drawable/rounded_field"
+        android:padding="12dp"
+        android:textColor="#123840"
+        android:textColorHint="#707070"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Comment -->
+    <EditText
+        android:id="@+id/editComment"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Write your review..."
+        android:gravity="top"
+        android:background="@drawable/rounded_field"
+        android:padding="12dp"
+        android:textColor="#123840"
+        android:textColorHint="#707070"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>

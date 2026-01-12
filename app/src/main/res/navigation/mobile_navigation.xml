@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_signIn">
+
+        <fragment
+            android:id="@+id/nav_register"
+            android:name="com.mbrats01.epl498_group_project.ui.register.RegisterFragment"
+            android:label="register"
+            tools:layout="@layout/fragment_register">
+
+                <action
+                    android:id="@+id/action_nav_register_to_home_page"
+                    app:destination="@id/home_page" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_signIn"
+            android:name="com.mbrats01.epl498_group_project.ui.signIn.SignInFragment"
+            android:label="signIn"
+            tools:layout="@layout/fragment_sign_in">
+
+                <action
+                    android:id="@+id/action_nav_signIn_to_home_page"
+                    app:destination="@id/home_page" />
+
+                <action
+                    android:id="@+id/action_nav_signIn_to_forgotPassword"
+                    app:destination="@id/forgotPassword" />
+
+                <action
+                    android:id="@+id/action_home_page_to_register"
+                    app:destination="@id/nav_register" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/all_attractions"
+            android:name="com.mbrats01.epl498_group_project.ui.allAttractions.AllAttractionsFragment"
+            android:label="All Attractions"
+            tools:layout="@layout/fragment_all_attractions">
+
+                <action
+                    android:id="@+id/action_all_attractions_to_attractionDetailFragment"
+                    app:destination="@id/attractionDetailFragment" />
+
+                <action
+                    android:id="@+id/action_all_to_home_page"
+                    app:destination="@id/home_page" />
+
+
+                <action
+                    android:id="@+id/action_all_to_map_page"
+                    app:destination="@id/map_page" />
+
+                <action
+                    android:id="@+id/action_all_to_attractionDetailFragment"
+                    app:destination="@id/attractionDetailFragment" />
+
+                <action
+                    android:id="@+id/action_all_to_profile"
+                    app:destination="@id/profile" />
+
+                <action
+                    android:id="@+id/action_all_to_plansFragment"
+                    app:destination="@id/plansFragment" />
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/home_page"
+            android:name="com.mbrats01.epl498_group_project.ui.home.HomeFragment"
+            android:label="Home"
+            tools:layout="@layout/fragment_home">
+
+                <action
+                    android:id="@+id/action_home_page_to_all_attractions"
+                    app:destination="@id/all_attractions" />
+
+                <action
+                    android:id="@+id/action_home_page_to_map_page"
+                    app:destination="@id/map_page" />
+
+                <action
+                    android:id="@+id/action_home_page_to_attractionDetailFragment"
+                    app:destination="@id/attractionDetailFragment" />
+
+                <action
+                    android:id="@+id/action_home_page_to_profile"
+                    app:destination="@id/profile" />
+
+                <action
+                    android:id="@+id/action_home_page_to_plansFragment"
+                    app:destination="@id/plansFragment" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/map_page"
+            android:name="com.mbrats01.epl498_group_project.ui.map.MapFragment"
+            android:label="Map"
+            tools:layout="@layout/fragment_map">
+
+                <action
+                    android:id="@+id/action_map_page_to_home_page"
+                    app:destination="@id/home_page" />
+
+                <action
+                    android:id="@+id/action_map_page_to_all_attractions"
+                    app:destination="@id/all_attractions" />
+
+                <action
+                    android:id="@+id/action_map_page_to_attractionDetailFragment"
+                    app:destination="@id/attractionDetailFragment" />
+
+                <action
+                    android:id="@+id/action_map_page_to_profile"
+                    app:destination="@id/profile" />
+
+                <action
+                    android:id="@+id/action_map_page_to_plansFragment"
+                    app:destination="@id/plansFragment" />
+
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/attractionDetailFragment"
+            android:name="com.mbrats01.epl498_group_project.ui.attractionDetail.AttractionDetailFragment"
+            android:label="Attraction details"
+            tools:layout="@layout/fragment_attraction_detail">
+
+                <action
+                    android:id="@+id/action_attractionDetailFragment_to_reviewsFragment"
+                    app:destination="@id/reviewsFragment" />
+
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/reviewsFragment"
+            android:name="com.mbrats01.epl498_group_project.ui.reviews.ReviewsFragment"
+            android:label="Reviews"
+            tools:layout="@layout/fragment_reviews">
+
+                <argument
+                    android:name="placeId"
+                    app:argType="string" />
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/forgotPassword"
+            android:name="com.mbrats01.epl498_group_project.ui.signIn.ForgotPasswordFragment"
+            android:label="Forgot Password"
+            tools:layout="@layout/fragment_forgot_password">
+
+                <action
+                    android:id="@+id/action_forgotPassword_to_resetPassword"
+                    app:destination="@id/resetPassword" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/resetPassword"
+            android:name="com.mbrats01.epl498_group_project.ui.signIn.ResetPasswordFragment"
+            android:label="Reset Password"
+            tools:layout="@layout/fragment_reset_password">
+
+                <action
+                    android:id="@+id/action_resetPassword_to_nav_signIn"
+                    app:destination="@id/nav_signIn"
+                    app:popUpTo="@id/mobile_navigation"
+                    app:popUpToInclusive="true" />
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/profile"
+            android:name="com.mbrats01.epl498_group_project.ui.profile.ProfileFragment"
+            android:label="Profile"
+            tools:layout="@layout/fragment_profile">
+
+                <action
+                    android:id="@+id/action_profile_to_profileInfo"
+                    app:destination="@id/profileInfo" />
+
+                <action
+                    android:id="@+id/action_profile_to_about"
+                    app:destination="@id/aboutFragment" />
+
+                <action
+                    android:id="@+id/action_profile_to_signIn"
+                    app:destination="@id/nav_signIn"
+                    app:popUpTo="@id/mobile_navigation"
+                    app:popUpToInclusive="true" />
+
+                <action
+                    android:id="@+id/action_profile_to_all_attractions"
+                    app:destination="@id/all_attractions" />
+
+                <action
+                    android:id="@+id/action_profile_to_map_page"
+                    app:destination="@id/map_page" />
+
+                <!-- Paei sta details MINISKEI UNTOUCHED stis allages -->
+                <action
+                    android:id="@+id/action_profile_to_attractionDetailFragment"
+                    app:destination="@id/attractionDetailFragment" />
+
+                <action
+                    android:id="@+id/action_profile_to_plansFragment"
+                    app:destination="@id/plansFragment" />
+
+                <action
+                    android:id="@+id/action_profile_to_home_page"
+                    app:destination="@id/home_page" />
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/profileInfo"
+            android:name="com.mbrats01.epl498_group_project.ui.profile.ProfileInfoFragment"
+            android:label="Profile Info"
+            tools:layout="@layout/fragment_profile_info">
+
+                <action
+                    android:id="@+id/action_profileInfo_to_editProfile"
+                    app:destination="@id/editProfile" />
+
+                <action
+                    android:id="@+id/action_profileInfo_to_profile"
+                    app:destination="@id/profile" />
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/editProfile"
+            android:name="com.mbrats01.epl498_group_project.ui.profile.EditProfileFragment"
+            android:label="Edit Profile"
+            tools:layout="@layout/fragment_edit_profile">
+
+                <action
+                    android:id="@+id/action_editProfile_to_profileInfo"
+                    app:destination="@id/profileInfo" />
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/aboutFragment"
+            android:name="com.mbrats01.epl498_group_project.ui.profile.AboutFragment"
+            android:label="About"
+            tools:layout="@layout/fragment_about" />
+
+        <fragment
+            android:id="@+id/plansFragment"
+            android:name="com.mbrats01.epl498_group_project.ui.plan.PlansFragment"
+            android:label="Plans"
+            tools:layout="@layout/fragment_plans">
+
+                <action
+                    android:id="@+id/action_plansFragment_to_plannedAttractionFragment"
+                    app:destination="@id/plannedAttractionFragment" />
+
+                <action
+                    android:id="@+id/action_plans_to_home_page"
+                    app:destination="@id/home_page" />
+
+                <action
+                    android:id="@+id/action_plans_to_map_page"
+                    app:destination="@id/map_page" />
+
+                <action
+                    android:id="@+id/action_plans_to_all_attractions"
+                    app:destination="@id/all_attractions" />
+
+                <action
+                    android:id="@+id/action_plans_to_attractionDetailFragment"
+                    app:destination="@id/attractionDetailFragment" />
+
+                <action
+                    android:id="@+id/action_plans_to_profile"
+                    app:destination="@id/profile" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/plannedAttractionFragment"
+            android:name="com.mbrats01.epl498_group_project.ui.plan.PlannedAttractionFragment"
+            android:label="Scheduled Attraction"
+            tools:layout="@layout/fragment_planned_attraction" />
+
+
+</navigation>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8E9D0">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/about_logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/about_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:lineSpacingExtra="6dp"
+                android:text="Tripplor is a location-based travel app designed for last-minute explorers. It instantly shows attractions around you and helps you plan activities for today and tomorrow with zero effort. Fast, simple, and personalized." />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/about_bottom_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="30dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version 1.0"
+            android:textSize="16sp"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/about_developer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Developed by UCY"
+            android:textSize="16sp"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/about_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="support@tripplor.com"
+            android:textSize="16sp"
+            android:textColor="#3366CC" />
+
+    </LinearLayout>
+
+</FrameLayout>
